@@ -106,35 +106,11 @@ nav a:active {
     grid-template-areas: "p a";
     justify-content: center;
 }
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
 iframe {
     width: 100%;
-    height: 500px;
+    height: 800px;
     border: none;
 }
-
 @media only screen and (max-width: 600px) {
     .header .image {
         display: none;

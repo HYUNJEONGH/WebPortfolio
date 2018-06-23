@@ -9,11 +9,13 @@
 
 .header .image {
     grid-row: 2 / 3;
-    width:0 auto;
-    overflow: hidden;
+    width: 100px;
+    height: 100px;
     margin-left: 20px;
     margin-right: 20px;
+    align-self: flex-end;
 }
+
 .header p {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
@@ -43,8 +45,8 @@
 }
 
 nav {
-    width: 300px;
     margin: 0 auto;
+    text-align: center;
 }
 
 nav ul {
@@ -53,7 +55,6 @@ nav ul {
 
 nav li {
     display: inline-block;
-    font-family: "Nanum Gothic", sans-serif;
     font-size: 1.2em;
     line-height: 40px;
 }
@@ -63,8 +64,8 @@ nav a {
     text-decoration: none;
     padding: 8px;
     border: 1px solid black;
-    font-family: "Raleway", sans-serif;
     text-align: center;
+    font-family: "Raleway", sans-serif;
 }
 nav a:hover {
     background-color: lawngreen;
@@ -85,22 +86,57 @@ nav a:active {
     width: 500px;
     height: 400px;
 }
+.project img{
+    width: 30px;
+    height: 30px;
+}
 .project .content p {
     font-family: "Nanum Gothic", sans-serif;
     text-align: center;
-    width: 50%;
+    justify-self: center;
+    width: 500px;
 }
 .project .content a {
-    align-self: center;
-    margin-left: 20px;
+    align-self: flex-end;
+    margin: 10px;
 }
+
 .project .content {
     display: grid;
     grid-template-areas: "p a";
-    justify-items: center;
+    justify-content: center;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 iframe {
     width: 100%;
     height: 500px;
     border: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .header .image {
+        display: none;
+    }
 }
